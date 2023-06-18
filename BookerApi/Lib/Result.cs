@@ -1,4 +1,4 @@
-﻿namespace BookerApi.Models;
+﻿namespace BookerApi.Lib;
 
 public class Error
 {
@@ -31,3 +31,6 @@ public class ErrorResult
         Error = error;
     }
 }
+
+public class EmptyResult
+{ }

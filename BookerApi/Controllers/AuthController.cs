@@ -1,6 +1,8 @@
 ﻿using BookerApi.Config;
 using BookerApi.Lib;
-using BookerApi.Models;
+
+using BookerApi.Lib;
+
 using Data.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;

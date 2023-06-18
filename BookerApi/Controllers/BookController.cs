@@ -1,5 +1,7 @@
 ﻿using BookerApi.Lib;
-using BookerApi.Models;
+
+using BookerApi.Lib;
+
 using Data;
 using Data.Models;
 using Microsoft.AspNetCore.Authorization;
@@ -51,7 +53,7 @@ public class BookController : ResultController
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteOne([FromRoute] string id)
     {
-        var error = await db.DeleteOne<Book>(x => x.Id == "");
+        var error = await db.DeleteOne<Book>(x => x.Id == id);
         if (error == null) return Success();
 
         if (error is EntityNotFoundException) return Error("Book isn't found.", 404);

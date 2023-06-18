@@ -1,4 +1,4 @@
-﻿using BookerApi.Models;
+﻿using BookerApi.Lib;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BookerApi.Lib;
@@ -23,5 +23,5 @@ public class ResultController : ControllerBase
     }
 
     [NonAction]
-    public IActionResult Success() => Ok(new { });
+    public IActionResult Success() => Ok(new EmptyResult());
 }
