@@ -43,7 +43,7 @@ public class BookController : ResultController
     public async Task<IActionResult> PostOne([FromBody] BookCreation body)
     {
         var book = await db.CreateOne(new Book(body.Title, body.Description, body.Author));
-        if (book.Data != null) return Ok();
+        if (book.Data != null) return Success();
 
         return Error("The server can't save changes now. Try later or contact us.", 500);
     }
@@ -52,7 +52,7 @@ public class BookController : ResultController
     public async Task<IActionResult> DeleteOne([FromRoute] string id)
     {
         var error = await db.DeleteOne<Book>(x => x.Id == "");
-        if (error == null) return Ok();
+        if (error == null) return Success();
 
         if (error is EntityNotFoundException) return Error("Book isn't found.", 404);
 

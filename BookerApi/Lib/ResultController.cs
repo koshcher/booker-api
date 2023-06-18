@@ -21,4 +21,7 @@ public class ResultController : ControllerBase
         Response.StatusCode = statusCode;
         return new JsonResult(new ErrorResult(error));
     }
+
+    [NonAction]
+    public IActionResult Success() => Ok(new { });
 }
