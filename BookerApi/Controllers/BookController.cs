@@ -43,7 +43,7 @@ public class BookController : ResultController
     public async Task<IActionResult> PostOne([FromBody] BookCreation body)
     {
         var book = await db.CreateOne(new Book(body.Title, body.Description, body.Author));
-        if (book.Data != null) return Data(book.Data);
+        if (book.Data != null) return Ok();
 
         return Error("The server can't save changes now. Try later or contact us.", 500);
     }
