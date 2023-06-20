@@ -1,13 +1,9 @@
 ﻿using BookerApi.Lib;
 
-using BookerApi.Lib;
-
 using Data;
 using Data.Models;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration.Json;
-using Unator;
+using Unator.EntityFrameworkCore;
 
 namespace BookerApi.Controllers;
 

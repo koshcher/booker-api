@@ -1,5 +1,4 @@
-﻿using BookerApi.Lib;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace BookerApi.Lib;
 
