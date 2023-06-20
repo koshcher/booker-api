@@ -1,6 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore.Storage.ValueConversion.Internal;
-
-namespace BookerApi.Config;
+﻿namespace BookerApi.Config;
 
 public static class Secrets
 {
