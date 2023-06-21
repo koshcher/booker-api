@@ -2,6 +2,7 @@
 
 using Data;
 using Data.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Unator.EntityFrameworkCore;
 
@@ -37,6 +38,7 @@ public class BookController : ResultController
 
     public record class BookCreation(string Title, string Description, string Author);
 
+    [Authorize]
     [HttpPost]
     public async Task<IActionResult> PostOne([FromBody] BookCreation body)
     {
@@ -46,6 +48,7 @@ public class BookController : ResultController
         return Error("The server can't save changes now. Try later or contact us.", 500);
     }
 
+    [Authorize]
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteOne([FromRoute] string id)
     {
